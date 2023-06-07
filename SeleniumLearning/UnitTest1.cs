@@ -1,0 +1,33 @@
+using NUnit.Framework;
+
+namespace SeleniumLearning
+{
+    public class Tests
+    {
+        [SetUp]
+        public void Setup()  //pre request like lunching browser, setting up implicity wait
+        {
+            TestContext.Progress.WriteLine("Setup method execution");
+        }
+
+        [Test]
+        public void Test1() // for functionality logic
+        {
+            TestContext.Progress.WriteLine("This is test 1");
+            
+        }
+
+        [Test]
+        public void Test2() // for functionality logic
+        {
+            TestContext.Progress.WriteLine("This is test 2");
+            
+        }
+
+        [TearDown]
+        public void CloseBrowser() // Post request
+        {
+            TestContext.Progress.WriteLine("Tear down method");
+        }
+    }
+}
